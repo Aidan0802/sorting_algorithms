@@ -63,19 +63,13 @@ int lomuto_partition(int *array, int low, int high)
 
 void quick_sort_helper(int *array, int low, int high)
 {
-	int partition_idx, i;
+	int partition_idx;
 
 	if (low < high)
 	{
 		partition_idx = lomuto_partition(array, low, high);
 
-		for (i = 0; i < high + 1; i++)
-		{
-			printf("%d", array[i]);
-			if (i < high)
-				printf(", ");
-		}
-		printf("\n");
+		print_array(array, high);
 
 		quick_sort_helper(array, low, partition_idx - 1);
 		quick_sort_helper(array, partition_idx + 1, high);
