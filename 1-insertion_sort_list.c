@@ -45,7 +45,7 @@ void insertion_sort_list(listint_t **list)
 	{
 		printf("%d", temp->n);
 		if (temp->next != NULL)
-			printf(" -> ");
+			printf(", ");
 		temp = temp->next;
 	}
 	printf("\n");
